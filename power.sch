@@ -3845,6 +3845,17 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="0.6834" y="-1.65"/>
 </polygon>
 </symbol>
+<symbol name="VIN">
+<wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
+<text x="-1.016" y="3.556" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="VIN" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
+<symbol name="DGND">
+<wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
+<text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="FRAME-LETTER" prefix="FRAME">
@@ -3879,6 +3890,32 @@ Standard 8.5x11 US Letter frame</description>
 </technologies>
 </device>
 <device name="L" package="OSHW-LOGO-L">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="VIN" prefix="SUPPLY">
+<description>Vin supply symbol</description>
+<gates>
+<gate name="G$1" symbol="VIN" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="GND" prefix="GND">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="1" symbol="DGND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -4260,6 +4297,20 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <part name="JP6" library="SparkFun-Connectors-modified" deviceset="M01" device="SMD-6X3"/>
 <part name="JP7" library="SparkFun-Connectors-modified" deviceset="M01" device="SMD-6X3"/>
 <part name="JP8" library="SparkFun-Connectors-modified" deviceset="M01" device="SMD-6X3"/>
+<part name="JP9" library="SparkFun-Connectors-modified" deviceset="M01" device="SMD-6X3"/>
+<part name="JP10" library="SparkFun-Connectors-modified" deviceset="M01" device="SMD-6X3"/>
+<part name="SUPPLY1" library="SparkFun-Aesthetics" deviceset="VIN" device=""/>
+<part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="SUPPLY2" library="SparkFun-Aesthetics" deviceset="VIN" device=""/>
+<part name="SUPPLY3" library="SparkFun-Aesthetics" deviceset="VIN" device=""/>
+<part name="SUPPLY4" library="SparkFun-Aesthetics" deviceset="VIN" device=""/>
+<part name="SUPPLY5" library="SparkFun-Aesthetics" deviceset="VIN" device=""/>
+<part name="GND2" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="GND3" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="GND4" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="GND5" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="JP11" library="SparkFun-Connectors-modified" deviceset="M01" device="SMD-6X3"/>
+<part name="JP12" library="SparkFun-Connectors-modified" deviceset="M01" device="SMD-6X3"/>
 </parts>
 <sheets>
 <sheet>
@@ -4287,10 +4338,88 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <instance part="JP6" gate="G$1" x="111.76" y="88.9" rot="R270"/>
 <instance part="JP7" gate="G$1" x="165.1" y="124.46" rot="R90"/>
 <instance part="JP8" gate="G$1" x="154.94" y="124.46" rot="R90"/>
+<instance part="JP9" gate="G$1" x="71.12" y="162.56" rot="R180"/>
+<instance part="JP10" gate="G$1" x="71.12" y="152.4" rot="R180"/>
+<instance part="SUPPLY1" gate="G$1" x="58.42" y="162.56" rot="R90"/>
+<instance part="GND1" gate="1" x="55.88" y="152.4" rot="R270"/>
+<instance part="SUPPLY2" gate="G$1" x="101.6" y="134.62"/>
+<instance part="SUPPLY3" gate="G$1" x="165.1" y="134.62"/>
+<instance part="SUPPLY4" gate="G$1" x="101.6" y="78.74" rot="R180"/>
+<instance part="SUPPLY5" gate="G$1" x="165.1" y="78.74" rot="R180"/>
+<instance part="GND2" gate="1" x="111.76" y="137.16" rot="R180"/>
+<instance part="GND3" gate="1" x="154.94" y="137.16" rot="R180"/>
+<instance part="GND4" gate="1" x="111.76" y="76.2"/>
+<instance part="GND5" gate="1" x="154.94" y="76.2"/>
+<instance part="JP11" gate="G$1" x="71.12" y="172.72" rot="R180"/>
+<instance part="JP12" gate="G$1" x="71.12" y="142.24" rot="R180"/>
 </instances>
 <busses>
 </busses>
 <nets>
+<net name="VIN" class="0">
+<segment>
+<pinref part="SUPPLY1" gate="G$1" pin="VIN"/>
+<pinref part="JP9" gate="G$1" pin="1"/>
+<wire x1="58.42" y1="162.56" x2="60.96" y2="162.56" width="0.1524" layer="91"/>
+<pinref part="JP11" gate="G$1" pin="1"/>
+<wire x1="60.96" y1="162.56" x2="63.5" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="172.72" x2="60.96" y2="172.72" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="172.72" x2="60.96" y2="162.56" width="0.1524" layer="91"/>
+<junction x="60.96" y="162.56"/>
+</segment>
+<segment>
+<pinref part="JP1" gate="G$1" pin="1"/>
+<pinref part="SUPPLY2" gate="G$1" pin="VIN"/>
+<wire x1="101.6" y1="134.62" x2="101.6" y2="132.08" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="JP7" gate="G$1" pin="1"/>
+<pinref part="SUPPLY3" gate="G$1" pin="VIN"/>
+<wire x1="165.1" y1="134.62" x2="165.1" y2="132.08" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="JP5" gate="G$1" pin="1"/>
+<pinref part="SUPPLY4" gate="G$1" pin="VIN"/>
+<wire x1="101.6" y1="78.74" x2="101.6" y2="81.28" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="JP3" gate="G$1" pin="1"/>
+<pinref part="SUPPLY5" gate="G$1" pin="VIN"/>
+<wire x1="165.1" y1="78.74" x2="165.1" y2="81.28" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="GND" class="0">
+<segment>
+<pinref part="JP10" gate="G$1" pin="1"/>
+<pinref part="GND1" gate="1" pin="GND"/>
+<wire x1="63.5" y1="152.4" x2="60.96" y2="152.4" width="0.1524" layer="91"/>
+<pinref part="JP12" gate="G$1" pin="1"/>
+<wire x1="60.96" y1="152.4" x2="58.42" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="142.24" x2="60.96" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="142.24" x2="60.96" y2="152.4" width="0.1524" layer="91"/>
+<junction x="60.96" y="152.4"/>
+</segment>
+<segment>
+<pinref part="JP2" gate="G$1" pin="1"/>
+<pinref part="GND2" gate="1" pin="GND"/>
+<wire x1="111.76" y1="134.62" x2="111.76" y2="132.08" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="JP8" gate="G$1" pin="1"/>
+<pinref part="GND3" gate="1" pin="GND"/>
+<wire x1="154.94" y1="134.62" x2="154.94" y2="132.08" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="JP6" gate="G$1" pin="1"/>
+<pinref part="GND4" gate="1" pin="GND"/>
+<wire x1="111.76" y1="78.74" x2="111.76" y2="81.28" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="JP4" gate="G$1" pin="1"/>
+<pinref part="GND5" gate="1" pin="GND"/>
+<wire x1="154.94" y1="78.74" x2="154.94" y2="81.28" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
