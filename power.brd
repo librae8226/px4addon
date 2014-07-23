@@ -418,7 +418,7 @@ design rules under a new name.</description>
 <element name="STANDOFF6" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="41" y="13"/>
 <element name="STANDOFF7" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="11" y="13"/>
 <element name="STANDOFF8" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="41" y="43"/>
-<element name="LOGO1" library="SparkFun-Aesthetics" package="OSHW-LOGO-L" value="OSHW-LOGOL" x="60" y="6"/>
+<element name="LOGO1" library="SparkFun-Aesthetics" package="OSHW-LOGO-L" value="OSHW-LOGOL" x="62.6" y="5.5"/>
 </elements>
 <signals>
 </signals>
