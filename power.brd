@@ -132,10 +132,10 @@
 <wire x1="83" y1="53" x2="83" y2="3" width="0" layer="20"/>
 <wire x1="68" y1="56" x2="83" y2="53" width="0" layer="20"/>
 <wire x1="68" y1="0" x2="83" y2="3" width="0" layer="20"/>
-<wire x1="55" y1="43" x2="55" y2="13" width="0" layer="20"/>
-<wire x1="55" y1="43" x2="61.5" y2="43" width="0" layer="20"/>
+<wire x1="55.5" y1="43" x2="55.5" y2="13" width="0" layer="20"/>
+<wire x1="55.5" y1="43" x2="61.5" y2="43" width="0" layer="20"/>
 <wire x1="61.5" y1="43" x2="61.5" y2="13" width="0" layer="20"/>
-<wire x1="55" y1="13" x2="61.5" y2="13" width="0" layer="20"/>
+<wire x1="55.5" y1="13" x2="61.5" y2="13" width="0" layer="20"/>
 <wire x1="68" y1="49" x2="68" y2="7" width="0" layer="20"/>
 <wire x1="68" y1="49" x2="76" y2="49" width="0" layer="20"/>
 <wire x1="76" y1="49" x2="76" y2="7" width="0" layer="20"/>
@@ -657,8 +657,8 @@ design rules under a new name.</description>
 <wire x1="29" y1="52.5" x2="29.5" y2="52.5" width="5" layer="1"/>
 <polygon width="0.6096" layer="16" isolate="0.6096">
 <vertex x="14" y="56"/>
-<vertex x="38" y="56"/>
-<vertex x="38" y="0"/>
+<vertex x="42.5" y="56"/>
+<vertex x="42.5" y="0"/>
 <vertex x="14" y="0"/>
 <vertex x="14" y="16"/>
 <vertex x="0" y="16"/>
