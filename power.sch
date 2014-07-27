@@ -7563,6 +7563,7 @@ Standard 3-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 </variantdefs>
 <classes>
 <class number="0" name="default" width="0" drill="0">
+<clearance class="0" value="0.205"/>
 </class>
 </classes>
 <parts>
